@@ -1,18 +1,19 @@
-import { QuizProvider } from './context/quizContext'
-import Quiz from './components/Quiz'
-import Options from './components/Options'
-import Results from './components/Results'
+import React from "react"
+import { QuizProvider } from "./context/quizContext"
+import Quiz from "./components/Quiz"
+import Options from "./components/Options"
+import Results from "./components/Results"
 
 function App() {
   return (
-    <div class="container mx-auto">
+    <div className="container mx-auto">
       <QuizProvider>
-        <div class="flex justify-center mx-auto pt-6 pb-6">
-          <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-orange-900 md:text-5xl lg:text-6xl dark:text-white">
+        <div className="flex justify-center mx-auto pt-6 pb-6">
+          <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-orange-900 md:text-5xl lg:text-6xl dark:text-white">
             Trivia App
-            </h1>
+          </h1>
         </div>
-        <div class="bg-white bg-opacity-80 rounded-lg">
+        <div className="bg-white bg-opacity-80 rounded-lg">
           <Options />
           <Quiz />
           <Results />
