@@ -26,7 +26,7 @@ const Quiz = () => {
               type="button"
               data-mdb-ripple="true"
               data-mdb-ripple-color="light"
-              class="inline-block w-40 px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+              class="inline-block w-40 my-4 px-6 py-2.5 bg-orange-300 hover:bg-orange-500 text-orange-900 border-stone-400 hover:text-white font-semibold text-s leading-tight uppercase rounded shadow-md transition duration-150 ease-in-out"
               onClick={() => dispatch({ type: "NEXT_QUESTION" })}
             >
               Next
@@ -34,7 +34,7 @@ const Quiz = () => {
             ) : (
               <button 
                 type="button"
-                class="inline-block w-40 px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded"
+                class="inline-block w-40 my-4 px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded"
                 style={{pointerEvents: "none"}}>
                 &nbsp;
               </button>

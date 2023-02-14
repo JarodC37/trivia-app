@@ -52,19 +52,6 @@ const reducer = (state, action) => {
           quizStarted: showResults ? false : true
         }
 
-      // const currentQuestionIndex = showResults
-      //   ? state.currentQuestionIndex
-      //   : state.currentQuestionIndex + 1;
-      // const answers = showResults
-      //   ? []
-      //   : shuffleAnswers(state.questions[currentQuestionIndex]);
-      // return {
-      //   ...state,
-      //   currentAnswer: "",
-      //   showResults,
-      //   currentQuestionIndex,
-      //   answers,
-      // };
     }
     case "RESTART": {
       return initialState;
@@ -76,8 +63,8 @@ const reducer = (state, action) => {
 
 export const QuizContext = createContext();
 
-export const QuizProvider = ({ children }) => {
-  const value = useReducer(reducer, initialState);
+export const QuizProvider = ({ children, state=initialState }) => {
+  const value = useReducer(reducer, state);
 
   return <QuizContext.Provider value={value}>{children}</QuizContext.Provider>;
 };

@@ -25,7 +25,7 @@ function QuizAnswers() {
     const getColor = (element) => {
         if (!quizState.currentAnswer) {
             // when no answer selected all return white
-            return "bg-white"
+            return "bg-gray-100"
         } 
         if (quizState.currentAnswer === element){
             // if element selected and is wrong, return red
@@ -36,14 +36,14 @@ function QuizAnswers() {
             // if element selected and is correct, return green
             return "bg-green-300"
         }
-        return currentQuestion.correctAnswer === element ? "bg-green-300" : "bg-white"
+        return currentQuestion.correctAnswer === element ? "bg-green-300" : "bg-gray-100"
     }
     return (
-        <div class="grid grid-cols-[500px_500px] gap-4">
+        <div class="grid grid-cols-[500px_500px] gap-4 mt-12">
            {allOptions.map(element => {
                 return (
                     <div>
-                        <label class={`inline-flex col-span-8 items-center justify-between w-full p-5 text-gray-900 ${getColor(element)} border-2 border-gray-600 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 peer-checked:border-blue-600 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700 ${disabledClass} `}
+                        <label class={`inline-flex col-span-8 items-center justify-between w-full p-5 text-gray-900 ${getColor(element)} border-2 border-gray-600 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 hover:text-gray-600 dark:peer-checked:text-gray-300 peer-checked:text-gray-600 hover:bg-gray-50 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700 ${disabledClass} `}
                             onClick={() => dispatch({ type: "SELECT_ANSWER", payload: element})}
                         >
                             <div class="w-full text-lg font-semibold">{element}</div>
@@ -51,7 +51,7 @@ function QuizAnswers() {
                     </div>
                 )
             })}
-                        <p>{currentQuestion.correctAnswer}</p>
+                        {/* <p>{currentQuestion.correctAnswer}</p> */}
 
         </div>
     )

@@ -12,7 +12,7 @@ function App() {
             Trivia App
             </h1>
         </div>
-        <div class="bg-white opacity-70 rounded-lg">
+        <div class="bg-white bg-opacity-80 rounded-lg">
           <Options />
           <Quiz />
           <Results />
