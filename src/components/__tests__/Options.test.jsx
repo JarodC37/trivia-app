@@ -1,8 +1,8 @@
-import {describe, expect, it, beforeEach} from "vitest";
-import {render, screen} from "@testing-library/react";
+import { describe, expect, it, beforeEach, afterEach } from "vitest";
+import { render, screen, cleanup } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { QuizProvider } from "../../context/quizContext";
-import Results from "../Results";
+import Options from "../Options";
 import React from "react";
 
 const initialState = {
@@ -21,13 +21,19 @@ describe("Results component test", () => {
   beforeEach(() => {
     render(
       <QuizProvider state={initialState}>
-        <Results></Results>
+        <Options />
       </QuizProvider>
     )
-  })
+  });
 
-  it("Should show results message", ()=> {
-    expect(screen.getByText("Your score is 2/3")).toBeVisible();
-  })
+  afterEach(() => cleanup);
+
+  it("Should show label for no. of questions", () => {
+    expect(screen.getByText("No. of Questions:")).toBeVisible();
+  });
+
+  it("Should show label for Select a category:", () => {
+    expect(screen.getByText("Select a category:")).toBeVisible();
+  });
 
 });

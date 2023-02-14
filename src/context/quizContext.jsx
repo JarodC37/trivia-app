@@ -42,8 +42,7 @@ const reducer = (state, action) => {
       ? state.currentQuestionIndex
       : state.currentQuestionIndex + 1;
     const showResults = state.currentQuestionIndex === state.questions.length - 1;
-    console.log(state)
-    console.log("🚀 ~ file: quizContext.jsx:45 ~ reducer ~ state", state)
+
     return {
       ...state,
       currentQuestionIndex,

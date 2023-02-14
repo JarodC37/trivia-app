@@ -47,7 +47,6 @@ function Options() {
         res.data.map(element => {
           element.answers = shuffle([element.correctAnswer, ...element.incorrectAnswers])
         });
-        console.log(res.data);
         dispatch({
           type: "ON_START",
           questions: res.data,
@@ -65,6 +64,7 @@ function Options() {
               <text>No. of Questions:   </text>
               <select
                 className="bg-gray-50 border border-stone-400 text-gray-900 text-sm rounded-lg focus:ring-amber-700 focus:border-amber-700 w-auto p-2"
+                data-testid="questionNum-selector"
                 value={questionLength}
                 onChange={handleLengthChange}
               >
@@ -77,6 +77,7 @@ function Options() {
               <text>Select a category:   </text>
               <select
                 className="bg-gray-50 border border-stone-400 text-gray-900 text-sm rounded-lg focus:ring-amber-700 focus:border-amber-700 w-auto p-2"
+                data-testid="category-selector"
                 value={category}
                 onChange={handleCategoryChange}
               >

@@ -4,7 +4,6 @@ import { QuizContext } from "../context/quizContext";
 const Results = () => {
   const [quizState] = useContext(QuizContext);
 
-  console.log(quizState)
   return (
     quizState.showResults ? (
       <div className="grid grid-rows-2 grid-flow-col gap-4 pt-10">       
