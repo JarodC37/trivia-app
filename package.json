@@ -2,7 +2,7 @@
   "name": "trivia-app",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://JarodC37.github.io/trivia-app",
+  "homepage": "https://jarodc37.github.io/trivia-app",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
