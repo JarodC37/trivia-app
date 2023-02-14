@@ -22,7 +22,7 @@ jobs:
           node-version: 18.x
 
       - name: Install and build
-        run: npm install && npm run build
+        run: npm ci && npm run build
 
       - name: Run eslint
         run: npm run lint
