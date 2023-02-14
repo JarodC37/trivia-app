@@ -27,7 +27,7 @@ describe("Results component test", () => {
   })
 
   it("Should show results message", ()=> {
-    expect(screen.getByText("Your score is 2/3")).toBeVisible();
+    expect(screen.getByText("Your score is 2/3sssss")).toBeVisible();
   })
 
 });
