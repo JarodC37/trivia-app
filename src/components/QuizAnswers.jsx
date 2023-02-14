@@ -51,8 +51,6 @@ function QuizAnswers() {
                     </div>
                 )
             })}
-                        {/* <p>{currentQuestion.correctAnswer}</p> */}
-
         </div>
     )
 }
