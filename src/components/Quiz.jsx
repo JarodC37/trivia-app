@@ -8,13 +8,13 @@ const Quiz = () => {
   return (
     quizState.quizStarted ? (
       <div className="flex flex-col items-center justify-center pt-3" >
-        <h2 className="text-center p-5 text-xl">
+        <p className="text-center p-5 text-xl">
           Question {quizState.currentQuestionIndex + 1}/{quizState.questions.length}
-        </h2>
+        </p>
 
-        <h1 className="mb-4 text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-4xl dark:text-white">
+        <p className="mb-4 mx-8 text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-4xl dark:text-white">
           {quizState.questions[quizState.currentQuestionIndex].question}
-        </h1>
+        </p>
 
 
         <br />
@@ -34,7 +34,7 @@ const Quiz = () => {
             ) : (
               <button 
                 type="button"
-                className="inline-block w-40 my-4 px-6 py-2.5 text-white font-medium text-xs leading-tight uppercase rounded"
+                className="inline-block w-40 my-4 px-6 py-2.5 text-white text-s leading-tight uppercase rounded font-semibold text-s"
                 style={{pointerEvents: "none"}}>
                 &nbsp;
               </button>
