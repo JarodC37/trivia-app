@@ -15,3 +15,8 @@ npm install
 npm run dev
 ```
 
+## Best Practices
+1. Using useContext and useReducer to manage state
+2. Splitting into different components and using folder structure
+3. Using tailwindcss
+4. Tried to use good code practices e.g. conditional renders
