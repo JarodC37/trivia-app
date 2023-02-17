@@ -29,7 +29,7 @@ describe("Results component test", () => {
   afterEach(() => cleanup);
 
   it("Should show label for no. of questions", () => {
-    expect(screen.getByText("No. of Questions:")).toBeVisible();
+    expect(screen.getByText("No. of Questions:asdfasdfasdf")).toBeVisible();
   });
 
   it("Should show label for Select a category:", () => {
